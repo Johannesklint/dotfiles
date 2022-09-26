@@ -77,7 +77,7 @@ vim.keymap.set("n", "sf", function()
     grouped = true,
     previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = { height = 40, width = 160 }
   })
 end)
 
@@ -169,8 +169,10 @@ vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
 
 -- Bindings
-vim.keymap.set("n", "+", "$", default_opt)
+vim.keymap.set("n", "+", "$")
 vim.keymap.set("n", "<C-ä", "0i//", default_opt)
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
+
 
 -- Split window
 vim.keymap.set('n', 'ss', ':split<Return><C-w>w')

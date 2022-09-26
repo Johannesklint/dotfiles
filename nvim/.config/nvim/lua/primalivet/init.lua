@@ -119,14 +119,9 @@ require'bufferline'.setup {
 require('telescope').setup{
   defaults = {
   layout_config = {
-      vertical = { width = 4 , preview_cutoff = 10 }
+      vertical = { width = 160, preview_cutoff = 10 }
       -- other layout configuration here
     },
-  },
-  pickers = {
-    find_files = {
-      theme = "dropdown",
-    }
   },
   extensions = {
     -- ...
@@ -139,10 +134,23 @@ telescope.setup {
   defaults = {
     mappings = {
       i = { ["<c-t>"] = trouble.open_with_trouble },
-      n = { ["<c-t>"] = trouble.open_with_trouble },
+      n = { 
+        ["<c-t>"] = trouble.open_with_trouble,
+      },
     },
   },
 }
+require('nvim-treesitter.configs').setup {
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  }
+} 
+require("nvim_comment").setup({
+  hook = function()
+    require("ts_context_commentstring.internal").update_commentstring()
+  end,
+})
 require('nvim-treesitter.configs').setup {
    autotag = {
     enable = true,

@@ -21,6 +21,7 @@ function M.init()
     print("Packer not available, you might have to restart Neovim")
     return
   end
+  use('prettier/vim-prettier')
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -31,9 +32,12 @@ function M.init()
     }
   }
   use("terrortylor/nvim-comment")
+  use("numToStr/Comment.nvim")
+  use('JoosepAlviste/nvim-ts-context-commentstring')
   use { "EdenEast/nightfox.nvim", tag = "v1.0.0" } -- Packer
   use { "haishanh/night-owl.vim" }
   use('folke/tokyonight.nvim')
+  use('folke/lsp-colors.nvim')
   use('leafgarland/typescript-vim')
   use('peitalin/vim-jsx-typescript')
   use('pangloss/vim-javascript')
@@ -45,6 +49,7 @@ function M.init()
    'romgrk/barbar.nvim',
    requires = {'kyazdani42/nvim-web-devicons'}
   }
+  use('kyazdani42/nvim-web-devicons')
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -95,6 +100,15 @@ function M.init()
         other = "﫠"
       },
       use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+      }
+    end
+  }
+  use {
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
       }
     end
   }

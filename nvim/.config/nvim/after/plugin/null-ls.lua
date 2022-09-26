@@ -6,7 +6,7 @@ local root_has_file = function(files)
   end
 end
 
-local eslint_root_files = { ".eslintrc", ".eslintrc.js", ".eslintrc.json" }
+local eslint_root_files = { ".eslintrc", ".eslintrc.js", ".eslintrc.json", ".eslintignore" }
 local prettier_root_files = { ".prettierrc", ".prettierrc.js", ".prettierrc.json" }
 local stylua_root_files = { "stylua.toml", ".stylua.toml" }
 local elm_root_files = { "elm.json" }
@@ -20,6 +20,9 @@ local opts = {
     end,
   },
   eslint_diagnostics = {
+    condition = root_has_file(eslint_root_files),
+  },
+  eslint_code_action = {
     condition = root_has_file(eslint_root_files),
   },
   prettier_formatting = {
@@ -47,6 +50,7 @@ null_ls.setup({
     null_ls.builtins.formatting.prettier.with(opts.prettier_formatting),
     null_ls.builtins.formatting.stylua.with(opts.stylua_formatting),
     null_ls.builtins.formatting.elm_format.with(opts.elm_format_formatting),
+    null_ls.builtins.code_actions.eslint_d.with(opts.eslint_code_action),
   },
   on_attach = on_attach,
 })
