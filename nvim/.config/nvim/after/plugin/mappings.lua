@@ -169,7 +169,7 @@ vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
 
 -- Bindings
-vim.keymap.set("n", "+", "$")
+-- vim.keymap.set("n", "+", "$")
 vim.keymap.set("n", "<C-ä", "0i//", default_opt)
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
