@@ -39,7 +39,6 @@ function M.init()
   use('folke/tokyonight.nvim')
   use('folke/lsp-colors.nvim')
   use('leafgarland/typescript-vim')
-  use('terryma/vim-expand-region')
   use('peitalin/vim-jsx-typescript')
   use('pangloss/vim-javascript')
   use('HerringtonDarkholme/yats.vim')
@@ -127,10 +126,7 @@ function M.init()
   use "nvim-lua/plenary.nvim"
   use("wbthomason/packer.nvim")
   use("editorconfig/editorconfig-vim")
-  use("tpope/vim-surround")
-  use("tpope/vim-repeat")
   use("tpope/vim-fugitive")
-  use("tpope/vim-commentary")
   use({
     "junegunn/fzf",
     requires = { "junegunn/fzf.vim" },
