@@ -141,6 +141,7 @@ vim.keymap.set("n", "<leader>b", ":Neotree position=left<CR>", default_opt)
 -- Edit
 vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, default_opt)
 vim.keymap.set("n", "<leader>ef", vim.lsp.buf.formatting, default_opt)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.formatting, default_opt)
 vim.keymap.set("n", "<leader>er", vim.lsp.buf.rename, default_opt)
 vim.keymap.set("v", "<leader>es", ":'<,'>sort<CR>", default_opt)
 
@@ -169,10 +170,9 @@ vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
 
 -- Bindings
--- vim.keymap.set("n", "+", "$")
 vim.keymap.set("n", "<C-ä", "0i//", default_opt)
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
-
+vim.keymap.set('n', 'pp', '"0p')
 
 -- Split window
 vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
