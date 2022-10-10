@@ -41,11 +41,7 @@ vim.cmd("colorscheme nightfox")
 vim.cmd("set mouse+=a")
 vim.cmd("set clipboard=unnamed")
 vim.cmd("set termguicolors")
-vim.cmd([[
-  let g:vsnip_filetypes = {}
-  let g:vsnip_filetypes.javascriptreact = ['javascript']
-  let g:vsnip_filetypes.typescriptreact = ['typescript']
-  ]])
+
 local telescope = require("telescope")
 telescope.load_extension "file_browser"
 
@@ -116,26 +112,19 @@ require'bufferline'.setup {
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
 }
-require('telescope').setup{
-  defaults = {
-  layout_config = {
-      vertical = { width = 160, preview_cutoff = 10 }
-      -- other layout configuration here
-    },
-  },
-  extensions = {
-    -- ...
-  }
-}
 local actions = require("telescope.actions")
 local trouble = require("trouble.providers.telescope")
 
 telescope.setup {
   defaults = {
+    layout_config = {
+      vertical = { width = 160, preview_cutoff = 10 }
+    },
     mappings = {
       i = { ["<c-t>"] = trouble.open_with_trouble },
       n = { 
         ["<c-t>"] = trouble.open_with_trouble,
+        ["<c-d>"] = actions.delete_buffer
       },
     },
   },

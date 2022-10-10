@@ -31,6 +31,7 @@ function M.init()
       "MunifTanjim/nui.nvim",
     }
   }
+  use("akinsho/toggleterm.nvim")
   use("terrortylor/nvim-comment")
   use("numToStr/Comment.nvim")
   use('JoosepAlviste/nvim-ts-context-commentstring')
@@ -127,6 +128,7 @@ function M.init()
   use("wbthomason/packer.nvim")
   use("editorconfig/editorconfig-vim")
   use("tpope/vim-fugitive")
+  use("tpope/vim-surround")
   use({
     "junegunn/fzf",
     requires = { "junegunn/fzf.vim" },
@@ -136,6 +138,8 @@ function M.init()
       vim.g.fzf_action = { ["ctrl-x"] = "split", ["ctrl-v"] = "vsplit" }
     end,
   })
+  use("rafamadriz/friendly-snippets")
+  use("hrsh7th/vim-vsnip-integ")
   use({
     "hrsh7th/nvim-cmp",
     requires = {
@@ -148,6 +152,12 @@ function M.init()
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp-signature-help",
     },
+ --   config = function() require("config.cmp") end,
+  })
+  use('saadparwaiz1/cmp_luasnip')
+  use({ "L3MON4D3/LuaSnip",
+    after = "nvim-cmp",
+  --  config = function() require("config.snippets") end,
   })
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
   use({

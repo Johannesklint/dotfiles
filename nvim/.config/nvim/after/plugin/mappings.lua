@@ -190,6 +190,9 @@ vim.keymap.set('n', '<C-w><right>', '<C-w>>')
 vim.keymap.set('n', '<C-w><up>', '<C-w>+')
 vim.keymap.set('n', '<C-w><down>', '<C-w>-')
 
+vim.keymap.set("n", "<C-9>", ":BufferClose<CR>")
+vim.keymap.set("n", "<C-p>", ":BufferPick<CR>")
+
 -- TODO: DAP keymaps
 -- dc  require('dap').continue()
 -- dsO require('dap').step_out() "Debug: Step out" },
