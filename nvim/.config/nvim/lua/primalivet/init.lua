@@ -148,4 +148,5 @@ require('nvim-treesitter.configs').setup {
     enabled = true
   }
 }
+require("lualine").setup()
 require("primalivet.packer").init()
