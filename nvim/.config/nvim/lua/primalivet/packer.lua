@@ -21,6 +21,7 @@ function M.init()
     print("Packer not available, you might have to restart Neovim")
     return
   end
+
   use('prettier/vim-prettier')
   use {
     'nvim-lualine/lualine.nvim',
@@ -124,7 +125,6 @@ function M.init()
   })
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
@@ -156,12 +156,6 @@ function M.init()
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp-signature-help",
     },
- --   config = function() require("config.cmp") end,
-  })
-  use('saadparwaiz1/cmp_luasnip')
-  use({ "L3MON4D3/LuaSnip",
-    after = "nvim-cmp",
-  --  config = function() require("config.snippets") end,
   })
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
   use({
@@ -174,7 +168,6 @@ function M.init()
     requires = { "hrsh7th/nvim-cmp", "jose-elias-alvarez/nvim-lsp-ts-utils", "simrat39/rust-tools.nvim" },
   })
   use({ "jose-elias-alvarez/null-ls.nvim" })
-  -- use({ "mfussenegger/nvim-dap" })
 end
 
 return M

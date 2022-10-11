@@ -168,30 +168,32 @@ vim.keymap.set("n", "<leader>tl", ":set list!<CR>", default_opt)
 vim.keymap.set("n", "<leader>tp", ":set invpaste<CR>", default_opt)
 vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
-
 -- Bindings
 vim.keymap.set("n", "<C-ä", "0i//", default_opt)
-vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
-vim.keymap.set('n', 'pp', '"0p')
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", default_opt)-- mark entire, similar to cmd + a
+vim.keymap.set("n", "pp", '"0p', default_opt)
+vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
 
 -- Split window
-vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
-vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
+vim.keymap.set("n", 'sv', ":vsplit<Return><C-w>w", default_opt)
+
 -- Move window
-vim.keymap.set('n', '<Space>', '<C-w>w')
-vim.keymap.set('', 'sh', '<C-w>h')
-vim.keymap.set('', 'sk', '<C-w>k')
-vim.keymap.set('', 'sj', '<C-w>j')
-vim.keymap.set('', 'sl', '<C-w>l')
+vim.keymap.set("n", "<Space>", '<C-w>w', default_opt)
+vim.keymap.set('', 'sh', '<C-w>h', default_opt)
+vim.keymap.set('', 'sk', '<C-w>k', default_opt)
+vim.keymap.set('', 'sj', '<C-w>j', default_opt)
+vim.keymap.set('', 'sl', '<C-w>l', default_opt)
 
 -- Resize window
-vim.keymap.set('n', '<C-w><left>', '<C-w><')
-vim.keymap.set('n', '<C-w><right>', '<C-w>>')
-vim.keymap.set('n', '<C-w><up>', '<C-w>+')
-vim.keymap.set('n', '<C-w><down>', '<C-w>-')
+vim.keymap.set('n', '<C-w><left>', '<C-w><', default_opt)
+vim.keymap.set('n', '<C-w><right>', '<C-w>>', default_opt)
+vim.keymap.set('n', '<C-w><up>', '<C-w>+', default_opt)
+vim.keymap.set('n', '<C-w><down>', '<C-w>-', default_opt)
 
-vim.keymap.set("n", "<C-9>", ":BufferClose<CR>")
-vim.keymap.set("n", "<C-p>", ":BufferPick<CR>")
+-- Close buffer
+vim.keymap.set("n", "<C-9>", ":BufferClose<CR>", default_opt)
+vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt)
 
 -- TODO: DAP keymaps
 -- dc  require('dap').continue()
