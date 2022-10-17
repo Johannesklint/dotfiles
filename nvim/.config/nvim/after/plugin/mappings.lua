@@ -47,8 +47,8 @@ vim.keymap.set("n", "<leader>sf", ":Files<CR>", default_opt)
 vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", default_opt)
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files prompt_prefix=🔭<CR>", default_opt)
+vim.keymap.set("n", "<leader>fg", ":Telescope live_grep prompt_prefix=🔍<CR>", default_opt)
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
