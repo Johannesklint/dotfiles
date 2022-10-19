@@ -3,7 +3,8 @@ local rusttools = require("rust-tools")
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
 local cmp_lsp = require("cmp_nvim_lsp")
 
-local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 
 local function on_attach(client, _)
   -- Disable LSP formatting for all language server
