@@ -41,6 +41,7 @@ vim.cmd("colorscheme nightfox")
 vim.cmd("set mouse+=a")
 vim.cmd("set clipboard=unnamed")
 vim.cmd("set termguicolors")
+vim.cmd("set conceallevel=1")
 
 require("lualine").setup()
 require("luasnip.loaders.from_vscode").lazy_load()

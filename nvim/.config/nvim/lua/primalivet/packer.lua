@@ -23,6 +23,12 @@ function M.init()
   end
 
   use('prettier/vim-prettier')
+  -- use("leafgarland/typescript-vim")
+  -- use("peitalin/vim-jsx-typescript")
+  use("HerringtonDarkholme/yats.vim")
+  use('pangloss/vim-javascript') 
+  use('maxmellon/vim-jsx-pretty')
+  use('jparise/vim-graphql' ) 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
