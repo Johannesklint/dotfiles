@@ -92,6 +92,7 @@ vim.keymap.set("n", "<C-ä", "0i//", default_opt)
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", default_opt)-- mark entire, similar to cmd + a
 vim.keymap.set("n", "pp", '"0p', default_opt)
 vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
+vim.keymap.set('x', 'x', '"_d', default_opt)
 
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
