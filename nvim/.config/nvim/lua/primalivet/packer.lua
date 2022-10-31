@@ -26,6 +26,7 @@ function M.init()
   -- use("leafgarland/typescript-vim")
   -- use("peitalin/vim-jsx-typescript")
   use("HerringtonDarkholme/yats.vim")
+  use('pangloss/vim-javascript') 
   use('maxmellon/vim-jsx-pretty')
   use('jparise/vim-graphql' ) 
   use {
