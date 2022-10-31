@@ -59,8 +59,8 @@ vim.keymap.set("n", "<leader>b", ":Neotree position=left<CR>", default_opt)
 
 -- Edit
 vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, default_opt)
-vim.keymap.set("n", "<leader>ef", vim.lsp.buf.formatting, default_opt)
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.formatting, default_opt)
+vim.keymap.set("n", "<leader>ef", vim.lsp.buf.format, default_opt)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, default_opt)
 vim.keymap.set("n", "<leader>er", vim.lsp.buf.rename, default_opt)
 vim.keymap.set("v", "<leader>es", ":'<,'>sort<CR>", default_opt)
 

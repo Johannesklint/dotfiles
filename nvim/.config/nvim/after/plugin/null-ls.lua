@@ -77,9 +77,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 
 local function on_attach(client, _)
-  if client.resolved_capabilities.document_formatting then
-    vim.cmd("command! -buffer Formatting lua vim.lsp.buf.formatting()")
-    vim.cmd("command! -buffer FormattingSync lua vim.lsp.buf.formatting_sync()")
+  if client.server_capabilities.document_formatting then
+    vim.cmd("command! -buffer Formatting lua vim.lsp.buf.format()")
+    vim.cmd("command! -buffer FormattingSync lua vim.lsp.buf.format()")
 
     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
   end
