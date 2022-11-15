@@ -28,7 +28,14 @@ function M.init()
   use("HerringtonDarkholme/yats.vim")
   use('pangloss/vim-javascript') 
   use('maxmellon/vim-jsx-pretty')
-  use('jparise/vim-graphql' ) 
+  use('jparise/vim-graphql') 
+  use ({
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      {"nvim-lua/plenary.nvim"},
+      {"nvim-treesitter/nvim-treesitter"}
+    }
+  })
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
