@@ -91,8 +91,10 @@ vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 vim.keymap.set("n", "<C-ä", "0i//", default_opt)
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", default_opt)-- mark entire, similar to cmd + a
 vim.keymap.set("n", "pp", '"0p', default_opt)
+vim.keymap.set("n", "aa", "$", default_opt) -- go to end of line
+vim.keymap.set("v", "aa", "$", default_opt) -- go to end of line in visual mode
 vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
-vim.keymap.set('x', 'x', '"_d', default_opt)
+vim.keymap.set('x', 'x', '"_d')
 
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
@@ -115,11 +117,11 @@ vim.keymap.set('n', '<C-w><down>', '<C-w>-', default_opt)
 vim.keymap.set("n", "<C-9>", ":BufferClose<CR>", default_opt)
 vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt)
 
--- TODO: DAP keymaps
--- dc  require('dap').continue()
--- dsO require('dap').step_out() "Debug: Step out" },
--- dso require('dap').step_over()
--- dsi require('dap').step_into()
--- bt require('dap').toggle_breakpoint()
--- bc require('dap').clear_breakpoints()
--- dr require('dap').repl.toggle()
+-- remap to open the Telescope refactoring menu in visual mode
+vim.api.nvim_set_keymap(
+  "v",
+  "<leader>rr",
+  "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+  { noremap = true }
+)
+
