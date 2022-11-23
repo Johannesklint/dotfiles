@@ -23,10 +23,7 @@ function M.init()
   end
 
   use('prettier/vim-prettier')
-  -- use("leafgarland/typescript-vim")
-  -- use("peitalin/vim-jsx-typescript")
   use("HerringtonDarkholme/yats.vim")
-  use('pangloss/vim-javascript') 
   use('maxmellon/vim-jsx-pretty')
   use('jparise/vim-graphql') 
   use ({
@@ -52,6 +49,7 @@ function M.init()
   use("terrortylor/nvim-comment")
   use("numToStr/Comment.nvim")
   use('JoosepAlviste/nvim-ts-context-commentstring')
+  use('christoomey/vim-tmux-navigator')
   use { "EdenEast/nightfox.nvim", tag = "v1.0.0" } 
   use { "haishanh/night-owl.vim" }
   use('folke/tokyonight.nvim')

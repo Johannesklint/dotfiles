@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>sf", ":Files<CR>", default_opt)
 vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files prompt_prefix=🔭<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix='🔭' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep prompt_prefix=🔍<CR>", default_opt)
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
@@ -88,13 +88,12 @@ vim.keymap.set("n", "<leader>tp", ":set invpaste<CR>", default_opt)
 vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
 -- Bindings
-vim.keymap.set("n", "<C-ä", "0i//", default_opt)
-vim.keymap.set("n", "<C-a>", "gg<S-v>G", default_opt)-- mark entire, similar to cmd + a
-vim.keymap.set("n", "pp", '"0p', default_opt)
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", default_opt) -- mark entire, similar to cmd + a
+vim.keymap.set("n", "pp", '"0p', default_opt) -- paste the latest yank
 vim.keymap.set("n", "aa", "$", default_opt) -- go to end of line
 vim.keymap.set("v", "aa", "$", default_opt) -- go to end of line in visual mode
 vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
-vim.keymap.set('x', 'x', '"_d')
+vim.keymap.set('x', 'x', '"_d') -- delete but not save in yank
 
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
@@ -115,7 +114,9 @@ vim.keymap.set('n', '<C-w><down>', '<C-w>-', default_opt)
 
 -- Close buffer
 vim.keymap.set("n", "<C-9>", ":BufferClose<CR>", default_opt)
-vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt)
+vim.keymap.set("n", "<C-0>", ":bw<CR>", default_opt)
+vim.keymap.set("n", "<C-0>", ":w | %bd | e#<CR>", default_opt) -- close all buffer but current one
+vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt) -- choose buffer by entering C-9 followed by a letter
 
 -- remap to open the Telescope refactoring menu in visual mode
 vim.api.nvim_set_keymap(
