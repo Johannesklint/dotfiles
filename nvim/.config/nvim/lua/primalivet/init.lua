@@ -37,6 +37,9 @@ opt.wildmenu = true
 opt.wildmode = "lastused:list:full"
 opt.wrap = false
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd("colorscheme nightfox")
 vim.cmd("set mouse+=a")
 vim.cmd("set clipboard=unnamed")
@@ -45,4 +48,5 @@ vim.cmd("set conceallevel=1")
 
 require("lualine").setup()
 require("luasnip.loaders.from_vscode").lazy_load()
+require("nvim-tree").setup()
 require("primalivet.packer").init()
