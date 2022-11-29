@@ -53,10 +53,12 @@ vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
 
--- Neotree
-vim.keymap.set("n", "<leader>fp", ":Neotree position=left dir=%:p:h:h reveal_file=%:p<CR>", default_opt)
-vim.keymap.set("n", "<leader>b", ":Neotree position=left<CR>", default_opt)
-
+-- -- Neotree
+-- vim.keymap.set("n", "<leader>fp", ":Neotree position=left dir=%:p:h:h reveal_file=%:p<CR>", default_opt)
+-- vim.keymap.set("n", "<leader>b", ":Neotree position=left<CR>", default_opt)
+-- File explorer
+vim.keymap.set("n", "<leader>fp", ":NvimTreeFindFile<CR>", default_opt)
+vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", default_opt)
 -- Edit
 vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, default_opt)
 vim.keymap.set("n", "<leader>ef", vim.lsp.buf.format, default_opt)
@@ -113,9 +115,9 @@ vim.keymap.set('n', '<C-w><up>', '<C-w>+', default_opt)
 vim.keymap.set('n', '<C-w><down>', '<C-w>-', default_opt)
 
 -- Close buffer
-vim.keymap.set("n", "<C-9>", ":BufferClose<CR>", default_opt)
+vim.keymap.set("n", "<leader>o", ":BufferClose<CR>", default_opt)
 vim.keymap.set("n", "<C-0>", ":bw<CR>", default_opt)
-vim.keymap.set("n", "<C-0>", ":w | %bd | e#<CR>", default_opt) -- close all buffer but current one
+vim.keymap.set("n", "<leader>O", ":w | %bd | e#<CR>", default_opt) -- close all buffer but current one
 vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt) -- choose buffer by entering C-9 followed by a letter
 
 -- remap to open the Telescope refactoring menu in visual mode
