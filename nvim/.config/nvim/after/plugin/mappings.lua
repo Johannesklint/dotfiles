@@ -53,9 +53,6 @@ vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
 
--- -- Neotree
--- vim.keymap.set("n", "<leader>fp", ":Neotree position=left dir=%:p:h:h reveal_file=%:p<CR>", default_opt)
--- vim.keymap.set("n", "<leader>b", ":Neotree position=left<CR>", default_opt)
 -- File explorer
 vim.keymap.set("n", "<leader>fp", ":NvimTreeFindFile<CR>", default_opt)
 vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", default_opt)
@@ -65,6 +62,7 @@ vim.keymap.set("n", "<leader>ef", vim.lsp.buf.format, default_opt)
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, default_opt)
 vim.keymap.set("n", "<leader>er", vim.lsp.buf.rename, default_opt)
 vim.keymap.set("v", "<leader>es", ":'<,'>sort<CR>", default_opt)
+vim.keymap.set("n", "<leader>move", ":TSLspRenameFile<CR>", default_opt)
 
 -- Goto
 vim.keymap.set("n", "<leader>gf", "gf", default_opt)
