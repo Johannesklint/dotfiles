@@ -78,24 +78,16 @@ function M.init()
   })
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      'nvim-lua/plenary.nvim',
+      "nvim-telescope/telescope-live-grep-args.nvim",
+    },
   }
   use "nvim-lua/plenary.nvim"
   use("wbthomason/packer.nvim")
   use("editorconfig/editorconfig-vim")
   use("tpope/vim-fugitive")
   use("tpope/vim-surround")
-
-  -- use({
-  --    "junegunn/fzf",
-  --    requires = { "junegunn/fzf.vim" },
-  --    config = function()
-  --      vim.g.fzf_layout = { down = "30%" }
-  --      vim.g.fzf_preview_window = {}
-  --      vim.g.fzf_action = { ["ctrl-x"] = "split", ["ctrl-v"] = "vsplit" }
-  --    end,
-  --  })
-
   use("rafamadriz/friendly-snippets")
   use("hrsh7th/vim-vsnip-integ")
   use({

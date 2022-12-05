@@ -49,6 +49,7 @@ vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
 -- Telescope
 vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix='🔭' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep prompt_prefix=🔍<CR>", default_opt)
+vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
@@ -93,7 +94,8 @@ vim.keymap.set("n", "pp", '"0p', default_opt) -- paste the latest yank
 vim.keymap.set("n", "aa", "$", default_opt) -- go to end of line
 vim.keymap.set("v", "aa", "$", default_opt) -- go to end of line in visual mode
 vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
-vim.keymap.set('x', 'x', '"_d') -- delete but not save in yank
+vim.keymap.set('n', 'x', '"_x') -- delete but not save in yank
+vim.keymap.set('v', 'x', '"_d') -- delete but not save in yank in visual mode
 
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
