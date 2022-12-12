@@ -48,5 +48,9 @@ vim.cmd("set conceallevel=1")
 
 require("lualine").setup()
 require("luasnip.loaders.from_vscode").lazy_load()
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+  view = {
+    width = 40,
+  }
+})
 require("primalivet.packer").init()
