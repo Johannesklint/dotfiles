@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
 vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix='🔭' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep prompt_prefix=🔍<CR>", default_opt)
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
-vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", default_opt)
+vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix='🔭' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
 
