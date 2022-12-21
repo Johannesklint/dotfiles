@@ -40,6 +40,10 @@ vim.keymap.set("n", "]b", ":bnext<CR>", default_opt)
 vim.keymap.set("n", "[h", gitsigns.prev_hunk, default_opt)
 vim.keymap.set("n", "]h", gitsigns.next_hunk, default_opt)
 
+-- Git
+vim.keymap.set("n", "<leader>gl", ":diffget //2<CR>", default_opt) -- Move diff from left side to middle
+vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>", default_opt) -- Move diff from right side to middle
+
 -- Search
 vim.keymap.set("n", "<leader>sb", ":Buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>sc", ":Commands<CR>", default_opt)
