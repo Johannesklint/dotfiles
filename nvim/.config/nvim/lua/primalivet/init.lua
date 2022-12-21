@@ -36,6 +36,8 @@ opt.wildignore = "*/node_modules/**,*/elm-stuff/**"
 opt.wildmenu = true
 opt.wildmode = "lastused:list:full"
 opt.wrap = false
+opt.hlsearch = false
+opt.incsearch = true
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

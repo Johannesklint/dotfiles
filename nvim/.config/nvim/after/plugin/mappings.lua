@@ -100,6 +100,11 @@ vim.keymap.set("v", "aa", "$", default_opt) -- go to end of line in visual mode
 vim.keymap.set('n', '<leader>s', ":wa<CR>", default_opt) -- save all
 vim.keymap.set('n', 'x', '"_x') -- delete but not save in yank
 vim.keymap.set('v', 'x', '"_d') -- delete but not save in yank in visual mode
+vim.keymap.set('x', '<leader>p',"\"_dP") -- delete but not save in yank when pasting over in visual mode
+vim.keymap.set('n', "<C-d>", "<C-d>zz", default_opt) -- Keep cursor in the middle when jumping half page
+vim.keymap.set('n', "<C-u>", "<C-u>zz", default_opt) -- Keep cursor in the middle when jumping half page
+vim.keymap.set('n', "n", "nzzzv", default_opt) -- Keep cursor in the middle when searching
+vim.keymap.set('n', "N", "Nzzzv", default_opt) -- Keep cursor in the middle when searching
 
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
