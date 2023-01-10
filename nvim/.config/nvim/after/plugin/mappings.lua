@@ -125,7 +125,6 @@ vim.keymap.set('n', '<C-w><down>', '<C-w>-', default_opt)
 
 -- Close buffer
 vim.keymap.set("n", "<leader>o", ":BufferClose<CR>", default_opt)
-vim.keymap.set("n", "<C-0>", ":bw<CR>", default_opt)
 vim.keymap.set("n", "<leader>O", ":w | %bd | e#<CR>", default_opt) -- close all buffer but current one
 vim.keymap.set("n", "<C-p>", ":BufferPick<CR>", default_opt) -- choose buffer by entering C-9 followed by a letter
 
