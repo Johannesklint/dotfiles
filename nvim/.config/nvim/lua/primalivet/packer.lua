@@ -26,13 +26,7 @@ function M.init()
   use("HerringtonDarkholme/yats.vim")
   use('maxmellon/vim-jsx-pretty')
   use('jparise/vim-graphql') 
-  use ({
-    "ThePrimeagen/refactoring.nvim",
-    requires = {
-      {"nvim-lua/plenary.nvim"},
-      {"nvim-treesitter/nvim-treesitter"}
-    }
-  })
+  use("ThePrimeagen/refactoring.nvim")
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -47,27 +41,20 @@ function M.init()
   use("numToStr/Comment.nvim")
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('christoomey/vim-tmux-navigator')
-  use { "EdenEast/nightfox.nvim", tag = "v1.0.0" } 
-  use { "haishanh/night-owl.vim" }
+  use("EdenEast/nightfox.nvim", { tag = "v1.0.0" })
   use('folke/tokyonight.nvim')
   use('folke/lsp-colors.nvim')
   use('windwp/nvim-ts-autotag')
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  } -- tabs
+  use("romgrk/barbar.nvim") -- tabs
   use('kyazdani42/nvim-web-devicons')
-  use {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-  }
+  use("folke/trouble.nvim")
   use("pangloss/vim-javascript")
   use {
     'rmagatti/auto-session',
     config = function()
       require("auto-session").setup {
         log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+        auto_session_suppress_dirs = {"~/Projects", "~/Downloads"},
       }
     end
   }
@@ -79,11 +66,10 @@ function M.init()
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = {
-      'nvim-lua/plenary.nvim',
       "nvim-telescope/telescope-live-grep-args.nvim",
     },
   }
-  use "nvim-lua/plenary.nvim"
+  use("nvim-lua/plenary.nvim")
   use("wbthomason/packer.nvim")
   use("editorconfig/editorconfig-vim")
   use("tpope/vim-fugitive")
@@ -103,7 +89,7 @@ function M.init()
       "hrsh7th/cmp-nvim-lsp-signature-help",
     },
   })
-  use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
+  use("lewis6991/gitsigns.nvim")
   use({
     "nvim-treesitter/nvim-treesitter",
     requires = { "nvim-treesitter/playground" },

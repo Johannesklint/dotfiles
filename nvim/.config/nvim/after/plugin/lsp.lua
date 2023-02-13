@@ -1,7 +1,6 @@
 local nvim_lsp = require("lspconfig")
 local rusttools = require("rust-tools")
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
-local cmp_lsp = require("cmp_nvim_lsp")
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

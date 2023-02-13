@@ -13,29 +13,6 @@ vim.keymap.set("v", ">", ">gv", default_opt)
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", default_opt)
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", default_opt)
 
--- Previous and Next: Quickfix
-vim.keymap.set("n", "[c", ":cprevious<CR>", default_opt)
-vim.keymap.set("n", "]c", ":cnext<CR>", default_opt)
-vim.keymap.set("n", "[C", ":cfirst<CR>", default_opt)
-vim.keymap.set("n", "]C", ":clast<CR>", default_opt)
-
--- Previous and Next: Loclist
-vim.keymap.set("n", "[l", ":lprevious<CR>", default_opt)
-vim.keymap.set("n", "]l", ":lnext<CR>", default_opt)
-vim.keymap.set("n", "[L", ":lfirst<CR>", default_opt)
-vim.keymap.set("n", "]L", ":llast<CR>", default_opt)
-
--- Previous and Next: Diagnostics
-vim.keymap.set("n", "[d", vim.diagnostic.goto_next, default_opt)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, default_opt)
-
--- Diagnostics
-vim.keymap.set("n", "<leader>dc", ":Diagnostics<CR>", default_opt)
-
--- Previous and Next: Buffer
-vim.keymap.set("n", "[b", ":bprevious<CR>", default_opt)
-vim.keymap.set("n", "]b", ":bnext<CR>", default_opt)
-
 -- Previous and Next: Hunk
 vim.keymap.set("n", "[h", gitsigns.prev_hunk, default_opt)
 vim.keymap.set("n", "]h", gitsigns.next_hunk, default_opt)
@@ -51,15 +28,15 @@ vim.keymap.set("n", "<leader>sf", ":Files<CR>", default_opt)
 vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix='🔭' })<CR>", default_opt)
-vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ path_display='smart', prompt_prefix='🔎' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ prompt_prefix=' 🔭 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ prompt_prefix=' 🔎 ' })<CR>", default_opt)
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
-vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix='📦' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix=' 📦 ' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
 vim.keymap.set("n", "<leader>fu", ":Telescope lsp_references<CR>", default_opt)
 
 -- File explorer
-vim.keymap.set("n", "<leader>fp", ":NvimTreeFindFile<CR>", default_opt)
+vim.keymap.set("n", "<leader>fp", ":NvimTreeFindFile<CR>zz", default_opt)
 vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", default_opt)
 -- Edit
 vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, default_opt)
@@ -77,7 +54,6 @@ vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, default_opt)
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, default_opt)
 vim.keymap.set("n", "<leader>gs", vim.lsp.buf.signature_help, default_opt)
 vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, default_opt)
-
 
 -- Errors 
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", default_opt)
