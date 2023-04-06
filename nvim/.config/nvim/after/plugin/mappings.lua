@@ -26,10 +26,11 @@ vim.keymap.set("n", "<leader>sb", ":Buffers<CR>", default_opt)
 vim.keymap.set("n", "<leader>sc", ":Commands<CR>", default_opt)
 vim.keymap.set("n", "<leader>sf", ":Files<CR>", default_opt)
 vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
+vim.keymap.set("n", "F4", ":set hlsearch! hlsearch?<CR>", default_opt)
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ prompt_prefix=' 🔭 ' })<CR>", default_opt)
-vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ prompt_prefix=' 🔎 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix=' 🔭 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ path_display='smart', prompt_prefix=' 🔎 ' })<CR>", default_opt)
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
 vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix=' 📦 ' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
