@@ -42,21 +42,23 @@ opt.incsearch = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.cmd("colorscheme nightfox")
-vim.cmd("set mouse+=a")
-vim.cmd("set clipboard=unnamed")
-vim.cmd("set termguicolors")
-vim.cmd("set conceallevel=1")
+vim.cmd[[
+  colorscheme nightfox
+  set mouse+=a
+  set clipboard=unnamed
+  set termguicolors
+  set conceallevel=1
+  set nohlsearch
+]]
 
 require("lualine").setup()
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_snipmate").lazy_load()
-
 require("luasnip").filetype_extend("all", { "_" })
-
 require("nvim-tree").setup({
   view = {
     width = 40,
   }
 })
 require("primalivet.packer").init()
+
