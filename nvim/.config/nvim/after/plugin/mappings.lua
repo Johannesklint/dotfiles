@@ -21,16 +21,9 @@ vim.keymap.set("n", "]h", gitsigns.next_hunk, default_opt)
 vim.keymap.set("n", "<leader>gl", ":diffget //2<CR>", default_opt) -- Move diff from left side to middle
 vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>", default_opt) -- Move diff from right side to middle
 
--- Search
-vim.keymap.set("n", "<leader>sb", ":Buffers<CR>", default_opt)
-vim.keymap.set("n", "<leader>sc", ":Commands<CR>", default_opt)
-vim.keymap.set("n", "<leader>sf", ":Files<CR>", default_opt)
-vim.keymap.set("n", "<leader>sg", ":GitFiles<CR>", default_opt)
-vim.keymap.set("n", "F4", ":set hlsearch! hlsearch?<CR>", default_opt)
-
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ path_display='smart', prompt_prefix=' 🔭 ' })<CR>", default_opt)
-vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ path_display='smart', prompt_prefix=' 🔎 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ prompt_prefix=' 🔭 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ prompt_prefix=' 🔎 ' })<CR>", default_opt)
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
 vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix=' 📦 ' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", default_opt)
@@ -65,7 +58,6 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", default_opt
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", default_opt)
 
 -- Toggle
-vim.keymap.set("n", "<leader>tl", ":set list!<CR>", default_opt)
 vim.keymap.set("n", "<leader>tp", ":set invpaste<CR>", default_opt)
 vim.keymap.set("n", "<leader>ts", ":nohlsearch<CR>", default_opt)
 
@@ -86,13 +78,6 @@ vim.keymap.set('n', "N", "Nzzzv", default_opt) -- Keep cursor in the middle when
 -- Split window
 vim.keymap.set("n", "ss", ":split<Return><C-w>w", default_opt)
 vim.keymap.set("n", 'sv', ":vsplit<Return><C-w>w", default_opt)
-
--- Move window
-vim.keymap.set("n", "<Space>", '<C-w>w', default_opt)
-vim.keymap.set('', 'sh', '<C-w>h', default_opt)
-vim.keymap.set('', 'sk', '<C-w>k', default_opt)
-vim.keymap.set('', 'sj', '<C-w>j', default_opt)
-vim.keymap.set('', 'sl', '<C-w>l', default_opt)
 
 -- Resize window
 vim.keymap.set('n', '<C-w><left>', '<C-w><', default_opt)
