@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>gl", ":diffget //2<CR>", default_opt) -- Move diff 
 vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>", default_opt) -- Move diff from right side to middle
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({ prompt_prefix=' 🔭 ' })<CR>", default_opt)
+vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({  prompt_prefix=' 🔭 ' })<CR>", default_opt)
 vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep({ prompt_prefix=' 🔎 ' })<CR>", default_opt)
 vim.keymap.set('n', '<leader>fs', require("telescope").extensions.live_grep_args.live_grep_args, default_opt)
 vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers({ path_display='smart', prompt_prefix=' 📦 ' })<CR>", default_opt)
