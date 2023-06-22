@@ -31,6 +31,7 @@ function M.init()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use("rebelot/kanagawa.nvim")
   use({
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -42,7 +43,6 @@ function M.init()
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('christoomey/vim-tmux-navigator')
   use("EdenEast/nightfox.nvim", { tag = "v1.0.0" })
-  use('folke/tokyonight.nvim')
   use('folke/lsp-colors.nvim')
   use('windwp/nvim-ts-autotag')
   use("romgrk/barbar.nvim") -- tabs

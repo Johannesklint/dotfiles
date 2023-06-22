@@ -43,7 +43,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.cmd[[
-  colorscheme nightfox
+  colorscheme kanagawa-wave
   set mouse+=a
   set clipboard=unnamed
   set termguicolors
